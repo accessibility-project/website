@@ -202,7 +202,7 @@ body {
   padding: 15px;
   border-color: #e8e8e8;
   border-width: 1px;
-  max-width: 250px;
+  max-width: 295px;
 }
 
 .live-feed {
@@ -347,3 +347,90 @@ body {
   line-height: 1.2;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
+
+
+/* dropdown menu */ 
+
+.menu-button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  top: 10px;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+.menu-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px 150px;
+  gap: 30px; 
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column; /* Säkerställer att rubriken är ovanför listan */
+}
+
+.menu-section-login {
+  background-color: #F7F7F7;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column; /* Säkerställer att rubriken är ovanför listan */
+}
+
+.menu-title-login {
+  font-size: 13px;
+  line-height: 32px;
+  color: #222222;
+  font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px; /* Ger utrymme mellan rubriken och listan */
+}
+
+.menu-title {
+  font-size: 13px;
+  line-height: 32px;
+  color: #DD2A30;
+  font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px; /* Ger utrymme mellan rubriken och listan */
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 32px;
+  color: #222222;
+  font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+}
+/*
+.menu-content h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-content ul li {
+  padding: 5px 0;
+}
+
+.menu-content button {
+  margin-top: 20px;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}*/

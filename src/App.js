@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import newsImage from "./breaking-news.jpg";
 import sunIcon from "./icons8-sun.svg";
+import adPic from "./beerad.png";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div>
@@ -36,8 +38,115 @@ function App() {
           <li>CULTURE</li>
           <li>OPINION</li>
           <li>LIVE TV</li>
+          <li onClick={() => setMenuOpen(!menuOpen)} className="menu-button">
+            ☰
+          </li>
         </ul>
       </nav>
+
+      {menuOpen && (
+        <div className="dropdown-menu">
+          <div className="menu-content">
+            <div className="menu-section">
+              <h3 className="menu-title">NEWS</h3>
+              <ul className="menu-list">
+                <li>Aftonbladet Direkt</li>
+                <li>Aftonbladet Klimat</li>
+                <li>Kolumnister</li>
+                <li>Lokalt</li>
+                <li>Min ekonomi</li>
+                <li>Svenska hjältar</li>
+                <li>TV</li>
+              </ul>
+            </div>
+
+            <div className="menu-section">
+              <h3 className="menu-title">SPORTS</h3>
+              <ul className="menu-list">
+                <li>F1-bloggen</li>
+                <li>Fotboll</li>
+                <li>Fotbollsresan</li>
+                <li>Hockey</li>
+                <li>Hockeyresan</li>
+                <li>Kampsport</li>
+                <li>Live-TV</li>
+                <li>Managerspel</li>
+                <li>Motorsport</li>
+                <li>Målservice</li>
+                <li>NHL-bloggen</li>
+                <li>Trav</li>
+              </ul>
+            </div>
+
+            <div className="menu-section">
+              <h3 className="menu-title">NÖJE</h3>
+              <ul className="menu-list">
+                <li>Film</li>
+                <li>Melodifestivalen</li>
+                <li>Musik</li>
+                <li>Rockbjörnen</li>
+                <li>Schlagerbloggen</li>
+                <li>Spela</li>
+                <li>Så gick det sen</li>
+                <li>Tv & Serier</li>
+              </ul>
+            </div>
+            <div className="menu-section">
+              <h3 className="menu-title">PREMIUM</h3>
+              <ul className="menu-list">
+                <li>Erbjudanden</li>
+                <li>Historiska arkivet</li>
+                <li>Magasin</li>
+                <li>Nyhetsbrev</li>
+                <li>Plusartiklar</li>
+                <li>Podcasts</li>
+                <li>Quiz</li>
+                <li>Reseguider</li>
+                <li>Tester & guider</li>
+              </ul>
+            </div>
+            <div className="menu-section">
+              <h3 className="menu-title">FEATURE</h3>
+              <ul className="menu-list">
+                <li>Bil</li>
+                <li>Family</li>
+                <li>Godare</li>
+                <li>Hemma</li>
+                <li>Horoskop</li>
+                <li>Klart</li>
+                <li>Kungligt</li>
+                <li>Mode</li>
+                <li>Resa</li>
+                <li>Skönhet</li>
+                <li>Tv.nu</li>
+              </ul>
+            </div>
+            <div className="menu-section">
+              <h3 className="menu-title">KULTUR & OPINION </h3>
+              <ul className="menu-list">
+                <li>Debatt</li>
+                <li>Kultur</li>
+                <li>Ledare</li>
+              </ul>
+            </div>
+            <div className="menu-section">
+              <h3 className="menu-title">A-Z</h3>
+            </div>
+            <div className="menu-section-login">
+              <h3 className="menu-title-login">LOGGA IN</h3>
+              <ul className="menu-list">
+                <li>Ljust Läge</li>
+                <li>Inställningar för cookies</li>
+                <li>Tipsa</li>
+                <li>Om</li>
+                <li>Kontakta oss</li>
+                <li>Kundsupport</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+
 
       <div className="top-image">
         <img src={newsImage} alt="Nyhetsbild" />
@@ -87,7 +196,6 @@ function App() {
         </article>
 
         <article>
-          <img src="https://via.placeholder.com/600x300" alt="ICA" />
           <h2 className="headline">Icas drag mitt i</h2>
         </article>
       </section>
@@ -96,7 +204,7 @@ function App() {
       {/* Sidokolumn */}
       <aside className="sidebar">
       <section className="live-feed">
-        <h className="direct">AFTONBLADET DIREKT</h>
+        <h className="direct">DIRECT NEWS</h>
         <ul>
           <li>
             <div className="info">
@@ -153,14 +261,14 @@ function App() {
 
 
         <section className="ad">
-          <p>Annons</p>
-          <img src="https://via.placeholder.com/300x200" alt="Annons" />
+          <div>
+            <img src={adPic} alt="Ad" />
+          </div>
         </section>
       </aside>
 
 
       <aside className="fixed-image-column">
-        <img src="https://via.placeholder.com/300x500" alt="Fast bild" />
       </aside>
     </div>
   </div>

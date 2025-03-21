@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "../styles/Sports.css";
 import newsImage from "../pic/breaking-news.jpg";
 import sunIcon from "../pic/icons8-sun.svg";
 import adPic from "../pic/beerad.png";
+import hockeyNews from "../pic/hockey-news.png";
+import hockeyNewsTwo from "../pic/live-hockey.png";
 import { Link } from "react-router-dom";
 
 function SportsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    document.body.className = "body-sports";
+  }, []);
 
   return (
     <div>
-      <header className="main-header">
+      <header className="sports-header">
         <div className="header-left">
           <p className="date">THURSDAY 20 MARCH 2025</p>
           <p className="subtitle">Daily names: Josef, Josefina</p>
@@ -29,12 +35,12 @@ function SportsPage() {
           <Link to="/premium">
             <button className="buy-btn">Buy +</button>
           </Link>
-          <button className="login-btn">Login</button>
+          <button className="login-btn-sports">Login</button>
         </div>
       </header>
 
 
-      <nav className="main-nav">
+      <nav className="sports-nav">
         <ul>
           <li>START</li>
           <li>SPORTS</li>
@@ -158,6 +164,63 @@ function SportsPage() {
       <div className="top-image">
         <img src={newsImage} alt="Nyhetsbild" />
       </div>
+
+
+
+      
+      <div className="top-news">
+        <div>
+          {/* Tre nyheter i rad */}
+          <div className="three-news">
+            <div className="news-box">
+              <div className="sports-columns">
+                <h1 className="sports-time"> 7pm </h1>
+                <h1 className="sports-league"> - SHL (H) </h1>
+              </div>
+              <div>
+                <h1 className="sports-teams"> Frölunda - Timrå</h1>
+              </div>
+            </div>
+            <div className="news-box">
+              <div className="sports-columns">
+                <h1 className="sports-time"> 7pm </h1>
+                <h1 className="sports-league"> - SHL (H) </h1>
+              </div>
+              <div>
+                <h1 className="sports-teams"> Frölunda - Timrå</h1>
+              </div>
+            </div>
+            <div className="news-box">
+              <div className="sports-columns">
+                <h1 className="sports-time"> 7pm </h1>
+                <h1 className="sports-league"> - SHL (H) </h1>
+              </div>
+              <div>
+                <h1 className="sports-teams"> Frölunda - Timrå</h1>
+              </div>
+            </div>
+          </div>
+
+          {/* Bild + rubrik direkt under three-news */}
+          <div className="image-container">
+            <img src={hockeyNews} alt="Nyhetsbild" />
+            <div className="sports-news-container">
+              <h2 className="big-sports-news">18 utvisningar - efter slutsignal</h2>
+              <h2 className="big-sports-text"> Hur hände det här egentligen kan man fråga sig</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* Hockey-nyheten till höger om både three-news och bilden */}
+        <div className="hockey-news">
+          <img src={hockeyNewsTwo} alt="Nyhetsbild" />
+        </div>
+      </div>
+
+
+
+
+
 
       <div className="container">
       {/* Huvudnyheter */}

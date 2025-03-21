@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../styles/Home.css";
+import "../styles/Sports.css";
 import newsImage from "../pic/breaking-news.jpg";
 import sunIcon from "../pic/icons8-sun.svg";
 import adPic from "../pic/beerad.png";
 import { Link } from "react-router-dom";
 
-function HomePage() {
-  const navigate = useNavigate();
+function SportsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -39,7 +37,7 @@ function HomePage() {
       <nav className="main-nav">
         <ul>
           <li>START</li>
-          <li onClick={() => navigate("/sports")}>SPORTS</li>
+          <li>SPORTS</li>
           <li>PREMIUM</li>
           <li>DISCOVER</li>
           <li>ENTERTAINMENT</li>
@@ -289,4 +287,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default SportsPage;

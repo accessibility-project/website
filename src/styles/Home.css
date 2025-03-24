@@ -4,10 +4,9 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
-
 body {
   background-color: #f7f7f7;
 }
@@ -343,7 +342,6 @@ body {
   font-size: 16px;
   margin: 4px 0 0 0;
   color: #444444;
-  line-height: 0.01;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
 
@@ -389,7 +387,6 @@ body {
   font-size: 16px;
   margin: 4px 0 0 0;
   color: #444444;
-  line-height: 1.2;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
 
@@ -418,7 +415,7 @@ body {
 
 .menu-section {
   display: flex;
-  flex-direction: column; /* Säkerställer att rubriken är ovanför listan */
+  flex-direction: column; 
 }
 
 .menu-section-login {
@@ -426,7 +423,16 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
-  flex-direction: column; /* Säkerställer att rubriken är ovanför listan */
+  flex-direction: column; 
+}
+
+.menu-list li {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-list li:hover {
+  text-decoration: underline;
 }
 
 .menu-title-login {
@@ -435,7 +441,7 @@ body {
   color: #222222;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
   font-weight: 700;
-  margin-bottom: 5px; /* Ger utrymme mellan rubriken och listan */
+  margin-bottom: 5px;
 }
 
 .menu-title {
@@ -444,7 +450,7 @@ body {
   color: #DD2A30;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
   font-weight: 700;
-  margin-bottom: 5px; /* Ger utrymme mellan rubriken och listan */
+  margin-bottom: 5px;
 }
 
 .menu-list {
@@ -467,30 +473,57 @@ body {
 }
 
 
-
-
-
-
-/*
-.menu-content h3 {
-  color: red;
-  margin-bottom: 10px;
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.menu-content ul {
-  list-style: none;
-  padding: 0;
+@media (max-width: 768px) {
+  .header-buttons {
+    justify-content: center;
+    margin-left: 0;
+  }
 }
 
-.menu-content ul li {
-  padding: 5px 0;
+@media (max-width: 768px) {
+  .main-header {
+    display: none;
+  }
 }
 
-.menu-content button {
-  margin-top: 20px;
-  padding: 10px;
-  background: red;
-  color: white;
-  border: none;
-  cursor: pointer;
-}*/
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #dd2a30;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .main-nav ul.show-menu {
+    display: flex;
+  }
+
+  .menu-button {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .main-nav li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+

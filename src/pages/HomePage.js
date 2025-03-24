@@ -38,8 +38,14 @@ function HomePage() {
 
       <nav className="main-nav">
         <ul>
-          <li onClick={() => navigate("/")}>START</li>
-          <li onClick={() => navigate("/sports")}>SPORTS</li>
+          <li onClick={() => {
+            navigate("/")
+            window.location.reload();
+          }}>START</li>
+          <li onClick={() => {
+            navigate("/sports")
+            window.location.reload();
+          }}>SPORTS</li>
           <li>PREMIUM</li>
           <li>DISCOVER</li>
           <li>ENTERTAINMENT</li>
@@ -57,104 +63,113 @@ function HomePage() {
         <div className="dropdown-menu">
           <div className="menu-content">
             <div className="menu-section">
-              <h3 className="menu-title">NEWS</h3>
+              <h3 className="menu-title-sports">NEWS</h3>
               <ul className="menu-list">
-                <li>Aftonbladet Direkt</li>
-                <li>Aftonbladet Klimat</li>
-                <li>Kolumnister</li>
-                <li>Lokalt</li>
-                <li>Min ekonomi</li>
-                <li>Svenska hjältar</li>
+                <li>Aftonbladet Direct</li>
+                <li>Aftonbladet Climate</li>
+                <li>Columnists</li>
+                <li>Local</li>
+                <li>My Economy</li>
+                <li>Swedish Heroes</li>
                 <li>TV</li>
               </ul>
             </div>
 
             <div className="menu-section">
-              <h3 className="menu-title">SPORTS</h3>
+              <h3 className="menu-title-sports">SPORTS</h3>
               <ul className="menu-list">
-                <li>F1-bloggen</li>
-                <li>Fotboll</li>
-                <li>Fotbollsresan</li>
+                <li>F1 Blog</li>
+                <li>Football</li>
+                <li>Football Trip</li>
                 <li>Hockey</li>
-                <li>Hockeyresan</li>
-                <li>Kampsport</li>
-                <li>Live-TV</li>
-                <li>Managerspel</li>
+                <li>Hockey Trip</li>
+                <li>Martial Arts</li>
+                <li>Live TV</li>
+                <li>Manager Games</li>
                 <li>Motorsport</li>
-                <li>Målservice</li>
-                <li>NHL-bloggen</li>
-                <li>Trav</li>
+                <li>Live Scores</li>
+                <li>NHL Blog</li>
+                <li>Horse Racing</li>
               </ul>
             </div>
 
             <div className="menu-section">
-              <h3 className="menu-title">NÖJE</h3>
+              <h3 className="menu-title-sports">ENTERTAINMENT</h3>
               <ul className="menu-list">
-                <li>Film</li>
-                <li>Melodifestivalen</li>
-                <li>Musik</li>
-                <li>Rockbjörnen</li>
-                <li>Schlagerbloggen</li>
-                <li>Spela</li>
-                <li>Så gick det sen</li>
-                <li>Tv & Serier</li>
+                <li>Movies</li>
+                <li>Eurovision</li>
+                <li>Music</li>
+                <li>Rock Bear Awards</li>
+                <li>Schlager Blog</li>
+                <li>Gaming</li>
+                <li>Where Are They Now</li>
+                <li>TV & Series</li>
               </ul>
             </div>
+
             <div className="menu-section">
-              <h3 className="menu-title">PREMIUM</h3>
+              <h3 className="menu-title-sports">PREMIUM</h3>
               <ul className="menu-list">
-                <li>Erbjudanden</li>
-                <li>Historiska arkivet</li>
-                <li>Magasin</li>
-                <li>Nyhetsbrev</li>
-                <li>Plusartiklar</li>
+                <li>Offers</li>
+                <li>Historical Archive</li>
+                <li>Magazines</li>
+                <li>Newsletters</li>
+                <li>Premium Articles</li>
                 <li>Podcasts</li>
-                <li>Quiz</li>
-                <li>Reseguider</li>
-                <li>Tester & guider</li>
+                <li>Quizzes</li>
+                <li>Travel Guides</li>
+                <li>Tests & Reviews</li>
               </ul>
             </div>
+
             <div className="menu-section">
-              <h3 className="menu-title">FEATURE</h3>
+              <h3 className="menu-title-sports">FEATURES</h3>
               <ul className="menu-list">
-                <li>Bil</li>
+                <li>Cars</li>
                 <li>Family</li>
-                <li>Godare</li>
-                <li>Hemma</li>
-                <li>Horoskop</li>
-                <li>Klart</li>
-                <li>Kungligt</li>
-                <li>Mode</li>
-                <li>Resa</li>
-                <li>Skönhet</li>
-                <li>Tv.nu</li>
+                <li>Food & Cooking</li>
+                <li>Home</li>
+                <li>Horoscope</li>
+                <li>Weather</li>
+                <li>Royal News</li>
+                <li>Fashion</li>
+                <li>Travel</li>
+                <li>Beauty</li>
+                <li>TV Guide</li>
               </ul>
             </div>
+
             <div className="menu-section">
-              <h3 className="menu-title">KULTUR & OPINION </h3>
+              <h3 className="menu-title-sports">CULTURE & OPINION</h3>
               <ul className="menu-list">
-                <li>Debatt</li>
-                <li>Kultur</li>
-                <li>Ledare</li>
+                <li>Debate</li>
+                <li>Culture</li>
+                <li>Editorial</li>
               </ul>
             </div>
+
             <div className="menu-section">
-              <h3 className="menu-title">A-Z</h3>
+              <h3 className="menu-title-sports">A-Z</h3>
             </div>
+
             <div className="menu-section-login">
-              <h3 className="menu-title-login">LOGGA IN</h3>
+              <h3 className="menu-title-login">LOGIN</h3>
               <ul className="menu-list">
-                <li>Ljust Läge</li>
-                <li>Inställningar för cookies</li>
-                <li>Tipsa</li>
-                <li>Om</li>
-                <li onClick={() => navigate("/contact")}>Kontakta oss</li>
-                <li>Kundsupport</li>
+                <li>Light Mode</li>
+                <li>Cookie Settings</li>
+                <li>Submit a Tip</li>
+                <li>About</li>
+                <li onClick={() => {
+                  navigate("/contact")
+                  window.location.reload();
+                }}>Contact Us</li>
+                <li>Customer Support</li>
               </ul>
             </div>
           </div>
         </div>
       )}
+
 
 
       <div className="top-image">
@@ -169,43 +184,39 @@ function HomePage() {
             <span className="breaking-news-one">BREAKING NEWS:</span> 
             <span className="headline-one">Lost Amazon Tribe Makes First Contact with the Modern World</span>
           </h2>
-          <p className="news-description-one">Fake news fake news fake news</p>
+          <p className="news-description-one">After centuries of isolation, an uncontacted Amazonian tribe has emerged, demanding WiFi and avocados.</p>
         </article>
 
         <article className="big-news">
           <h2>
             <span className="breaking-news">BREAKING NEWS:</span> 
-            <span className="headline">Skönhetskupp</span>
+            <span className="headline">Beauty Heist Shocks the Nation</span>
           </h2>
-          <p className="news-description">Uppgifter: Stal fillers ✔ Kraschade hjullastare</p>
+          <p className="news-description">Reports suggest thieves stole thousands of dollars worth of Botox and fillers ✔ Escaped in a runaway bulldozer.</p>
         </article>
 
         <article className="big-news">
           <h2>
             <span className="breaking-news">BREAKING NEWS:</span> 
-            <span className="headline">Skönhetskupp</span>
+            <span className="headline">Aliens Demand Citizenship</span>
           </h2>
-          <p className="news-description">Uppgifter: Stal fillers ✔ Kraschade hjullastare</p>
+          <p className="news-description">Extraterrestrials land in New York, claim they have been living here for centuries disguised as government officials.</p>
         </article>
 
         <article className="big-news">
           <h2>
             <span className="breaking-news">BREAKING NEWS:</span> 
-            <span className="headline">Skönhetskupp</span>
+            <span className="headline">Time Traveler Arrested for Insider Trading</span>
           </h2>
-          <p className="news-description">Uppgifter: Stal fillers ✔ Kraschade hjullastare</p>
+          <p className="news-description">Man claims to be from the year 2087, caught making suspiciously accurate stock market bets.</p>
         </article>
 
         <article className="big-news">
           <h2>
             <span className="breaking-news">BREAKING NEWS:</span> 
-            <span className="headline">Man åtalas för mordet på 28-åriga Nimo</span>
+            <span className="headline">Florida Man Wins Lawsuit Against Gravity</span>
           </h2>
-          <p className="news-description">Mannen erkänner</p>
-        </article>
-
-        <article>
-          <h2 className="headline">Icas drag mitt i</h2>
+          <p className="news-description">Court rules that gravity "personally inconvenienced" him after he tripped on a banana peel.</p>
         </article>
       </section>
 
@@ -218,58 +229,58 @@ function HomePage() {
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">09.13</span>
-              <span className="location">RYSSLAND</span>
+              <span className="time">09:13</span>
+              <span className="location">MARS</span>
             </div>
-            <p className="news-text">Rysk oljedepå i brand</p>
+            <p className="news-text">NASA loses contact with Mars rover after it "joins a union".</p>
           </li>
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">08.58</span>
-              <span className="location">MÄRSTA</span>
+              <span className="time">08:58</span>
+              <span className="location">VATICAN CITY</span>
             </div>
-            <p className="news-text">Man åtalas för mord</p>
+            <p className="news-text">Pope accidentally tweets "LOL" after mysterious UFO sighting.</p>
           </li>
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">08.17</span>
-              <span className="location">SOCIALDEMOKRATERNA</span>
+              <span className="time">08:17</span>
+              <span className="location">ATLANTIS</span>
             </div>
-            <p className="news-text">Kritik mot S-lotterna</p>
+            <p className="news-text">Lost city of Atlantis found—turns out it's just a fancy resort.</p>
           </li>
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">08.03</span>
-              <span className="location">AXFOOD</span>
+              <span className="time">08:03</span>
+              <span className="location">SPACEX</span>
             </div>
-            <p className="news-text">Axfood gör storvinst</p>
+            <p className="news-text">Elon Musk announces mission to send influencers to Pluto—"one-way only".</p>
           </li>
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">08.03</span>
-              <span className="location">AXFOOD</span>
+              <span className="time">08:03</span>
+              <span className="location">WORLD CUP</span>
             </div>
-            <p className="news-text">Axfood gör storvinst</p>
+            <p className="news-text">Referee sends himself off after controversial VAR decision.</p>
           </li>
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">08.03</span>
-              <span className="location">AXFOOD</span>
+              <span className="time">08:03</span>
+              <span className="location">HOLLYWOOD</span>
             </div>
-            <p className="news-text">Axfood gör storvinst</p>
+            <p className="news-text">Hollywood announces new movie: "Fast & Furious 47"—this time, in space.</p>
           </li>
           <li>
             <div className="info">
               <span className="status-dot"></span> 
-              <span className="time">08.03</span>
-              <span className="location">AXFOOD</span>
+              <span className="time">08:03</span>
+              <span className="location">SWEDEN</span>
             </div>
-            <p className="news-text">Axfood gör storvinst</p>
+            <p className="news-text">Scientists confirm: The Swedish summer actually lasts 17 minutes.</p>
           </li>
         </ul>
       </section>

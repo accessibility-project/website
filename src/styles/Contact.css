@@ -42,8 +42,8 @@ body {
 
 .search-container {
     display: flex;
-    justify-content: center; /* Centrerar sökrutan */
-    margin-top: 30px; /* Avstånd från rubriken */
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .search-box {
@@ -128,15 +128,15 @@ body {
 }
 
 .contact-card-one:hover {
-    background: rgb(0, 0, 0); /* Eller en annan ljusgrå nyans, t.ex. #f0f0f0 */
+    background: rgb(0, 0, 0);
 }
 
 .contact-card:hover {
-    background: rgb(235, 234, 234); /* Eller en annan ljusgrå nyans, t.ex. #f0f0f0 */
+    background: rgb(235, 234, 234);
 }
 
 .contact-card-two:hover {
-    background: rgb(235, 234, 234); /* Eller en annan ljusgrå nyans, t.ex. #f0f0f0 */
+    background: rgb(235, 234, 234);
 }
 
 .contact-icon {
@@ -145,19 +145,19 @@ body {
 }
 
 .contact-package-one {
-    margin-bottom: 10px; /* Minskar avståndet under rubriken */
+    margin-bottom: 10px;
 }
 
 .contact-info-one {
-    margin-top: 0; /* Tar bort extra avstånd ovanför texten */
+    margin-top: 0;
 }
 
 .contact-package {
-    margin-bottom: 10px; /* Minskar avståndet under rubriken */
+    margin-bottom: 10px; 
 }
 
 .contact-info {
-    margin-top: 0; /* Tar bort extra avstånd ovanför texten */
+    margin-top: 0;
 }
 
 

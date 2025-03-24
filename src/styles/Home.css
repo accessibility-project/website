@@ -342,7 +342,6 @@ body {
   font-size: 16px;
   margin: 4px 0 0 0;
   color: #444444;
-  line-height: 0.01;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
 
@@ -388,7 +387,6 @@ body {
   font-size: 16px;
   margin: 4px 0 0 0;
   color: #444444;
-  line-height: 1.2;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
 
@@ -417,7 +415,7 @@ body {
 
 .menu-section {
   display: flex;
-  flex-direction: column; /* Säkerställer att rubriken är ovanför listan */
+  flex-direction: column; 
 }
 
 .menu-section-login {
@@ -425,7 +423,16 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
-  flex-direction: column; /* Säkerställer att rubriken är ovanför listan */
+  flex-direction: column; 
+}
+
+.menu-list li {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-list li:hover {
+  text-decoration: underline;
 }
 
 .menu-title-login {
@@ -434,7 +441,7 @@ body {
   color: #222222;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
   font-weight: 700;
-  margin-bottom: 5px; /* Ger utrymme mellan rubriken och listan */
+  margin-bottom: 5px;
 }
 
 .menu-title {
@@ -443,7 +450,7 @@ body {
   color: #DD2A30;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
   font-weight: 700;
-  margin-bottom: 5px; /* Ger utrymme mellan rubriken och listan */
+  margin-bottom: 5px;
 }
 
 .menu-list {
@@ -465,31 +472,3 @@ body {
   margin-right: 8px;
 }
 
-
-
-
-
-
-/*
-.menu-content h3 {
-  color: red;
-  margin-bottom: 10px;
-}
-
-.menu-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-content ul li {
-  padding: 5px 0;
-}
-
-.menu-content button {
-  margin-top: 20px;
-  padding: 10px;
-  background: red;
-  color: white;
-  border: none;
-  cursor: pointer;
-}*/

@@ -1,8 +1,11 @@
 import React from "react";
 import "../styles/Contact.css";
 import { FaInfoCircle, FaBoxOpen, FaUser, FaShieldAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ContactPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <header className="contact-header">
@@ -70,9 +73,13 @@ const ContactPage = () => {
 
         {/* Paket 2 */}
         <div className="contact-wrapper">
-            <div className="contact-card-two">
-              <h3 className="contact-package">Contact us</h3>
-              <p className="contact-info">Call or send us an email.</p>
+            <div 
+                className="contact-card-two" 
+                onClick={() => navigate("/form")}
+                style={{ cursor: "pointer" }} // Gör det tydligt att den är klickbar
+            >
+                <h3 className="contact-package">Contact us</h3>
+                <p className="contact-info">Call or send us an email.</p>
             </div>
         </div>
     </div>

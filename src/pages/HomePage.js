@@ -38,7 +38,7 @@ function HomePage() {
 
       <nav className="main-nav">
         <ul>
-          <li>START</li>
+          <li onClick={() => navigate("/")}>START</li>
           <li onClick={() => navigate("/sports")}>SPORTS</li>
           <li>PREMIUM</li>
           <li>DISCOVER</li>
@@ -148,7 +148,7 @@ function HomePage() {
                 <li>Inställningar för cookies</li>
                 <li>Tipsa</li>
                 <li>Om</li>
-                <li>Kontakta oss</li>
+                <li onClick={() => navigate("/contact")}>Kontakta oss</li>
                 <li>Kundsupport</li>
               </ul>
             </div>

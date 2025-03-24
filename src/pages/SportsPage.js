@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Sports.css";
-import newsImage from "../pic/breaking-news.jpg";
+import newsImage from "../pic/bestsports.png";
 import sunIcon from "../pic/icons8-sun.svg";
 import adPic from "../pic/beerad.png";
 import hockeyNews from "../pic/hockey-news.png";
@@ -9,6 +10,7 @@ import hockeyNewsTwo from "../pic/live-hockey.png";
 import { Link } from "react-router-dom";
 
 function SportsPage() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     document.body.className = "body-sports";
@@ -42,7 +44,7 @@ function SportsPage() {
 
       <nav className="sports-nav">
         <ul>
-          <li>START</li>
+          <li onClick={() => navigate("/")}>START</li>
           <li>SPORTS</li>
           <li>PREMIUM</li>
           <li>DISCOVER</li>

@@ -472,3 +472,58 @@ body {
   margin-right: 8px;
 }
 
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-buttons {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #dd2a30;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .main-nav ul.show-menu {
+    display: flex;
+  }
+
+  .menu-button {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .main-nav li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+

@@ -253,33 +253,33 @@ html, body {
 }
 
 /* direct news, in right column */
-.live-feed {
-  background: white;
+.live-feed-sports {
+  background: #feebee;
   padding: 15px;
   border-color: #e8e8e8;
   border-width: 1px;
   max-width: 295px;
 }
 
-.live-feed {
+.live-feed-sports {
   border: 1px solid #e8e8e8;
   padding: 15px;
   margin-bottom: 15px;
-  background-color: white;
+  background-color: #feebee;
 }
 
-.live-feed h3 {
+.live-feed-sports h3 {
   font-size: 16px;
   font-weight: bold;
-  color: red;
+  color: #A11014;
 }
 
-.live-feed ul {
+.live-feed-sports ul {
   list-style: none;
   padding: 0;
 }
 
-.live-feed li {
+.live-feed-sports li {
   font-size: 14px;
   padding: 5px 0;
   border-bottom: 1px solid #ddd;
@@ -292,10 +292,10 @@ html, body {
   margin-right: 5px;
 }
 
-.location {
+.location-sports {
   font-weight: bold;
   text-transform: uppercase;
-  color: #dd2a30;
+  color: #A11014;
   font-weight: bolder;
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
   font-size: 14px;
@@ -314,8 +314,8 @@ html, body {
   margin-left: 18px;
 }
 
-.direct {
-  background-color: #dd2a30;
+.direct-sports {
+  background-color: #A11014;
   border-radius: 2px;
   margin: 0 0 0 0;
   padding: 5px 5px 4px 5px;
@@ -330,10 +330,10 @@ html, body {
 
 
 /* Main news */
-.breaking-news {
+.breaking-news-sports {
   font-size: 40px;
   letter-spacing: -.7px !important;
-  color: #dd2a30;
+  color: #A11014;
   font-weight: bolder;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   line-height: 1.08;
@@ -466,10 +466,10 @@ html, body {
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
 }
 
-.status-dot {
+.status-dot-sports {
   width: 11px;
   height: 11px;
-  background-color: #dd2a30;
+  background-color: #A11014;
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
@@ -577,4 +577,59 @@ html, body {
   flex-direction: column;
   gap: 0px;
   margin-top: -5px;
+}
+
+
+@media (max-width: 768px) {
+  .sports-header ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-buttons {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sports-header {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sports-header ul {
+    display: none; /* Dölj hela menyn */
+    flex-direction: column;
+    align-items: center;
+    background-color: #A11014; 
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .sports-header ul.show-menu {
+    display: flex; 
+  }
+
+  .menu-button {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .sports-header li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
 }

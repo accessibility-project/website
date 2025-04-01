@@ -1,187 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/Sports.css";
 import newsImage from "../pic/bestsports.png";
-import sunIcon from "../pic/icons8-sun.svg";
 import adPic from "../pic/beerad.png";
 import hockeyNews from "../pic/hockey-news.png";
 import hockeyNewsTwo from "../pic/CAKE.png";
+import SportsHeader from "../components/SportsHeader.js";
 
 function SportsPage() {
-    const navigate = useNavigate();
-    const [menuOpen, setMenuOpen] = useState(false);
     useEffect(() => {
         document.body.className = "body-sports";
     }, []);
 
     return (
         <div>
-            <header className="sports-header">
-                <div className="header-left">
-                    <p className="date">THURSDAY 20 MARCH 2025</p>
-                    <p className="subtitle">Daily names: Josef, Josefina</p>
-                </div>
-                <div className="header-right">
-                    <p className="weather">Weather</p>
-                    <p className="weather-location">SYDNEY</p>
-                </div>
-                <div className="header-icon">
-                    <img src={sunIcon} alt="Solsken" className="weather-icon" />
-                </div>
-                <div className="header-temp">
-                    <p className="temperature">28°</p>
-                </div>
-                <div className="header-buttons">
-                    <button 
-                        className="buy-btn" 
-                        onClick={() => {
-                            navigate("/premium");
-                            window.location.reload();
-                        }}
-                    >
-              Buy +
-                    </button>
-                    <button className="login-btn-sports">Login</button>
-                </div>
-            </header>
 
-
-            <nav className="sports-nav">
-                <ul>
-                    <li onClick={() => {
-                        navigate("/")
-                        window.location.reload();
-                    }}>START</li>
-                    <li onClick={() => {
-                        navigate("/sports")
-                        window.location.reload();
-                    }}>SPORTS</li>
-                    <li>PREMIUM</li>
-                    <li>DISCOVER</li>
-                    <li>ENTERTAINMENT</li>
-                    <li>TIPS</li>
-                    <li>CULTURE</li>
-                    <li>OPINION</li>
-                    <li>LIVE TV</li>
-                    <li onClick={() => setMenuOpen(!menuOpen)} className="menu-button">
-            ☰
-                    </li>
-                </ul>
-            </nav>
-
-            {menuOpen && (
-                <div className="dropdown-menu">
-                    <div className="menu-content-sports">
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">NEWS</h3>
-                            <ul className="menu-list">
-                                <li>Aftonbladet Direct</li>
-                                <li>Aftonbladet Climate</li>
-                                <li>Columnists</li>
-                                <li>Local</li>
-                                <li>My Economy</li>
-                                <li>Swedish Heroes</li>
-                                <li>TV</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">SPORTS</h3>
-                            <ul className="menu-list">
-                                <li>F1 Blog</li>
-                                <li>Football</li>
-                                <li>Football Trip</li>
-                                <li>Hockey</li>
-                                <li>Hockey Trip</li>
-                                <li>Martial Arts</li>
-                                <li>Live TV</li>
-                                <li>Manager Games</li>
-                                <li>Motorsport</li>
-                                <li>Live Scores</li>
-                                <li>NHL Blog</li>
-                                <li>Horse Racing</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">ENTERTAINMENT</h3>
-                            <ul className="menu-list">
-                                <li>Movies</li>
-                                <li>Eurovision</li>
-                                <li>Music</li>
-                                <li>Rock Bear Awards</li>
-                                <li>Schlager Blog</li>
-                                <li>Gaming</li>
-                                <li>Where Are They Now</li>
-                                <li>TV & Series</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">PREMIUM</h3>
-                            <ul className="menu-list">
-                                <li>Offers</li>
-                                <li>Historical Archive</li>
-                                <li>Magazines</li>
-                                <li>Newsletters</li>
-                                <li>Premium Articles</li>
-                                <li>Podcasts</li>
-                                <li>Quizzes</li>
-                                <li>Travel Guides</li>
-                                <li>Tests & Reviews</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">FEATURES</h3>
-                            <ul className="menu-list">
-                                <li>Cars</li>
-                                <li>Family</li>
-                                <li>Food & Cooking</li>
-                                <li>Home</li>
-                                <li>Horoscope</li>
-                                <li>Weather</li>
-                                <li>Royal News</li>
-                                <li>Fashion</li>
-                                <li>Travel</li>
-                                <li>Beauty</li>
-                                <li>TV Guide</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">CULTURE & OPINION</h3>
-                            <ul className="menu-list">
-                                <li>Debate</li>
-                                <li>Culture</li>
-                                <li>Editorial</li>
-                            </ul>
-                        </div>
-
-                        <div className="menu-section">
-                            <h3 className="menu-title-sports">A-Z</h3>
-                        </div>
-
-                        <div className="menu-section-login-sports">
-                            <h3 className="menu-title-login-sports">LOGIN</h3>
-                            <ul className="menu-list">
-                                <li>Light Mode</li>
-                                <li>Cookie Settings</li>
-                                <li>Submit a Tip</li>
-                                <li>About</li>
-                                <li onClick={() => {
-                                    navigate("/contact")
-                                    window.location.reload();
-                                }}>Contact Us</li>
-                                <li>Customer Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-
+            <SportsHeader />
 
             <div className="top-image">
                 <img src={newsImage} alt="Nyhetsbild" />
@@ -283,64 +117,64 @@ function SportsPage() {
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">10:42</span>
+                                    <span className="time-sports">10:42</span>
                                     <span className="location-sports">CHAMPIONS LEAGUE</span>
                                 </div>
-                                <p className="news-text">Dramatic penalty shootout sends underdog team to the final!</p>
+                                <p className="news-text-sports">Dramatic penalty shootout sends underdog team to the final!</p>
                             </li>
 
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">09:58</span>
+                                    <span className="time-sports">09:58</span>
                                     <span className="location-sports">NFL</span>
                                 </div>
-                                <p className="news-text">Quarterback sets new passing record – "I was just in the zone!"</p>
+                                <p className="news-text-sports">Quarterback sets new passing record – "I was just in the zone!"</p>
                             </li>
 
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">09:30</span>
+                                    <span className="time-sports">09:30</span>
                                     <span className="location-sports">OLYMPICS</span>
                                 </div>
-                                <p className="news-text">Teenager wins gold after shocking comeback – "This is unreal!"</p>
+                                <p className="news-text-sports">Teenager wins gold after shocking comeback – "This is unreal!"</p>
                             </li>
 
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">08:45</span>
+                                    <span className="time-sports">08:45</span>
                                     <span className="location-sports">HOCKEY WORLD CUP</span>
                                 </div>
-                                <p className="news-text">Captain ejected after massive brawl – "He went too far!"</p>
+                                <p className="news-text-sports">Captain ejected after massive brawl – "He went too far!"</p>
                             </li>
 
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">08:22</span>
+                                    <span className="time-sports">08:22</span>
                                     <span className="location-sports">FORMULA 1</span>
                                 </div>
-                                <p className="news-text">Rainstorm causes chaos – five cars crash out in turn one!</p>
+                                <p className="news-text-sports">Rainstorm causes chaos – five cars crash out in turn one!</p>
                             </li>
 
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">07:55</span>
+                                    <span className="time-sports">07:55</span>
                                     <span className="location-sports">TENNIS GRAND SLAM</span>
                                 </div>
-                                <p className="news-text">Unknown qualifier knocks out world number one in straight sets!</p>
+                                <p className="news-text-sports">Unknown qualifier knocks out world number one in straight sets!</p>
                             </li>
 
                             <li>
                                 <div className="info">
                                     <span className="status-dot-sports"></span> 
-                                    <span className="time">07:30</span>
+                                    <span className="time-sports">07:30</span>
                                     <span className="location-sports">EXTREME SPORTS</span>
                                 </div>
-                                <p className="news-text">Skateboarder lands never-before-seen trick – judges speechless!</p>
+                                <p className="news-text-sports">Skateboarder lands never-before-seen trick – judges speechless!</p>
                             </li>
                         </ul>
                     </section>

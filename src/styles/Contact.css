@@ -142,6 +142,7 @@ body {
 .contact-icon {
     font-size: 40px;
     margin-top: 30px;
+    color: rgb(111, 111, 111);
 }
 
 .contact-package-one {
@@ -162,10 +163,11 @@ body {
 
 
 .contact-card h3 {
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 10px;
     font-weight: 600;
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    color: rgb(111, 111, 111);
 }
 
 .contact-card ul {
@@ -219,7 +221,7 @@ body {
     font-style: inherit;
     font-weight: 900;
     font-size: 18px;
-    color: #000;
+    color: rgb(111, 111, 111);
 }
 
 .contact-info {
@@ -227,6 +229,7 @@ body {
     font-weight: 400;
     font-style: inherit;
     font-size: 16px;
+    color: rgb(111, 111, 111);
 }
 
 .contact-package-one {

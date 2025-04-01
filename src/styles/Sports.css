@@ -285,7 +285,7 @@ html, body {
   border-bottom: 1px solid #ddd;
 }
 
-.time {
+.time-sports {
   font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
   color: #909090;
   line-height: 1.2;
@@ -303,10 +303,10 @@ html, body {
   margin-right: 5px;
 }
 
-.news-text {
+.news-text-sports {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  color: #222222;
+  font-size: 14px;
+  color: #434343;
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: bold;
@@ -423,6 +423,10 @@ html, body {
   flex-wrap: wrap;
   padding: 2px 150px;
   gap: 30px; 
+}
+
+.menu-content-sports li {
+  font-size: 10px;
 }
 
 .menu-section {
@@ -579,6 +583,16 @@ html, body {
   margin-top: -5px;
 }
 
+
+@media (max-width: 768px) {
+  .main-header {
+    display: none;
+  }
+
+  .header-left {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .sports-header ul {

@@ -125,7 +125,7 @@ body {
 
 .premium-info {
     font-family: "Source Sans 3";
-    font-weight: 400;
+    font-weight: 200;
     font-style: inherit;
     font-size: 16px;
 }
@@ -225,12 +225,29 @@ body {
     }
 
     .premium-text {
-        font-size: 14px;
-        margin-top: 20px;
+        display: none;
     }
 
     .premium-card {
         width: 90%;
         margin: 10px auto; 
+    }
+}
+
+@media (max-width: 1000px) {
+    .premium-text {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .premium-text {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-container {
+        display: block;
     }
 }

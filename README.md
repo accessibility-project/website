@@ -2,7 +2,10 @@
 
 This project is part of my thesis "A Comparative Study of Standard UI/UX Design and Accessibility-Focused Approaches: User Experience and Usability Analysis."
 The goal is to replicate a newspaper website and then copy it to implement accessibility guidelines based on the European Accessibility Act.
-This is the website that doesn't follow the guidelines.
+
+> [!CAUTION]
+> This is the website that doesn't follow the guidelines. These defects are intentional.
+
 
 ## Technologies
 

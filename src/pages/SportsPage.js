@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import "../styles/Sports.css";
+import { useNavigate } from "react-router-dom"; 
 import newsImage from "../pic/bestsports.png";
 import adPic from "../pic/beerad.png";
 import hockeyNews from "../pic/hockey-news.png";
@@ -11,6 +12,12 @@ function SportsPage() {
     useEffect(() => {
         document.body.className = "body-sports";
     }, []);
+
+    const navigate = useNavigate();
+
+    const navigateToArticle = () => {
+        navigate("/article");
+    };
 
     return (
         <div>
@@ -151,7 +158,7 @@ function SportsPage() {
                             </li>
 
                             <li>
-                                <div className="info">
+                                <div className="info" style={{ cursor: 'pointer' }} onClick={navigateToArticle}>
                                     <span className="status-dot-sports"></span> 
                                     <span className="time-sports">08:22</span>
                                     <span className="location-sports">FORMULA 1</span>

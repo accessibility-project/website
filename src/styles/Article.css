@@ -1,0 +1,40 @@
+
+.article-page {
+  padding: 15px;
+  background-color: #fdd5db;
+}
+
+.article-header .headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  background: #feebee;
+  padding: 10px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.publish-time {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}

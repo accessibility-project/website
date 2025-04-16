@@ -5,6 +5,8 @@ import PremiumPage from "./pages/PremiumPage";
 import SportsPage from "./pages/SportsPage";
 import ContactPage from "./pages/ContactPage";
 import FormPage from "./pages/FormPage";
+import SuccessPage from "./pages/SuccessPage";
+import ArticlePage from "./pages/ArticlePage";
 
 const App = () => {
     return (
@@ -15,6 +17,8 @@ const App = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/sports" element={<SportsPage />} />
                 <Route path="/form" element={<FormPage />} />
+                <Route path="/article" element={<ArticlePage />} />
+                <Route path="/successpage" element={<SuccessPage />} />
             </Routes>
         </Router>
     );

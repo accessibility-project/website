@@ -1,10 +1,14 @@
 import React from "react";
+import { ClickCounterContext } from "../context/ClickCounterContext";
+import { useState, useContext } from "react";
 import "../styles/Home.css";
 import newsImage from "../pic/breaking-news.jpg";
 import adPic from "../pic/beerad.png";
 import HomeHeader from "../components/HomeHeader.js";
 
 function HomePage() {
+    const { setClickCount } = useContext(ClickCounterContext);
+    const [resetMessage, setResetMessage] = useState("");
 
     return (
         <div>
@@ -134,6 +138,23 @@ function HomePage() {
                 <aside className="fixed-image-column">
                 </aside>
             </div>
+            <a 
+                href="#" 
+                onClick={(e) => {
+                    e.preventDefault();
+                    setClickCount(0);
+                    localStorage.removeItem("clickCount");
+                    setResetMessage("Klickräknaren är nollställd!");
+                }} 
+                style={{ display: "block", textAlign: "center", marginTop: "2rem", cursor: "pointer", color: "blue", textDecoration: "underline" }}
+            >
+                Nollställ klickräknaren
+            </a>
+            {resetMessage && (
+                <p style={{ textAlign: "center", color: "blue", marginTop: "1rem" }}>
+                    {resetMessage}
+                </p>
+            )}
         </div>
     );
 }
